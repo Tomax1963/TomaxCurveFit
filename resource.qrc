@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>deutsch.png</file>
+        <file>Kurven.png</file>
+        <file>english.png</file>
+        <file>francais.png</file>
+        <file>copy.png</file>
+        <file>loading.gif</file>
+        <file>paypal.png</file>
+    </qresource>
+</RCC>
