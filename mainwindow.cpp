@@ -617,58 +617,6 @@ qint32 MainWindow::algo_lesen_pumpe(){
     return algo_p;
 }
 
-// QVector<double> MainWindow::werte_ermitteln(QVector<double> x, QVector<double> y, int degree){
-//     int i,j,k,N,n;
-//     N = x.size();
-//     n = degree;
-//     long double X[2*n+1];
-//     long double B[n+1][n+2];
-//     double a[n+1];
-//     for (i=0;i<2*n+1;i++){
-//         X[i]=0;
-//         for (j=0;j<N;j++)
-//             X[i]=X[i]+pow(x[j],i);
-//     }
-//     for (i=0;i<=n;i++)
-//         for (j=0;j<=n;j++)
-//             B[i][j]=X[i+j];
-//     long double Y[n+1];
-//     for (i=0;i<n+1;i++){
-//         Y[i]=0;
-//         for (j=0;j<N;j++)
-//             Y[i]=Y[i]+pow(x[j],i)*y[j];
-//     }
-//     for (i=0;i<=n;i++)
-//         B[i][n+1]=Y[i];
-//     n=n+1;
-
-//     for (i=0;i<n;i++)
-//         for (k=i+1;k<n;k++)
-//             if (B[i][i]<B[k][i])
-//                 for (j=0;j<=n;j++){
-//                     long double temp=B[i][j];
-//                     B[i][j]=B[k][j];
-//                     B[k][j]=temp;
-//                 }
-
-//     for (i=0;i<n-1;i++)
-//         for (k=i+1;k<n;k++){
-//             long double t=B[k][i]/B[i][i];
-//             for (j=0;j<=n;j++)
-//                 B[k][j]=B[k][j]-t*B[i][j];
-//         }
-//     for (i=n-1;i>=0;i--){
-//         a[i]=B[i][n];
-//         for (j=0;j<n;j++)
-//             if (j!=i)
-//                 a[i]=a[i]-B[i][j]*a[j];
-//         a[i]=a[i]/B[i][i];
-//     }
-//     QVector<double> transwerte(6);
-//     copy(a, a+n, transwerte.begin());
-//     return transwerte;
-// }
-
 QVector<double> MainWindow::werte_ermitteln(QVector<double> x, QVector<double> y, int degree) {
     int i, j, k, N, n;
     N = x.size();
@@ -968,10 +916,10 @@ void MainWindow::retranslateUi() {
 
 void MainWindow::on_pushButton_2_clicked(){
     meldung(tr("In diesem Fenster können Koordinaten grafisch digitalisiert werden.\n"
-               "Zunächst wird mit dem Button 'Bild laden' eine Grafik gewählt, die die Pumpenkurven enthält. Diese Grafik sollte im Format PNG oder JPG vorliegen.\n"
+               "Zunächst wird mit dem Button 'Bild laden' eine Grafik gewählt, die die Koordinaten in einem Koordinatensystem enthält. Diese Grafik sollte im Format PNG oder JPG vorliegen.\n"
                "Alternativ kann euch ein Bild aus der Zwischenablage eingefügt werden. Mit dem Haken in dem Feld 'proportional' wird das Bild eingefügt wie kopiert. "
                "Wird der Haken entfernt, wird das Bild auf maximale Grösse gedehnt. "
-               "Danach erfolgt die Eichung der eingelesenen Grafik, indem die min- und max-Werte der Achsen des Diagramms angeklickt werden. Zusätzlich sollten "
+               "Danach erfolgt die Kalibrierung der eingelesenen Grafik, indem die min- und max-Werte der Achsen des Diagramms angeklickt werden. Zusätzlich sollten "
                "vorher die entsprechenden Grenzwerte der Grafik in die Felder unter 'Wert' eingegeben werden. Damit weiss das Programm dann, welche Minima und Maxima "
                "berücksichtigt werden sollen.\n"
                "Mit den Kästchen 'logX' und 'logY' kann festgelegt werden, dass es sich bei der einzulesenden Grafik um eine logarhytmische Darstellung handelt.\n"
@@ -985,5 +933,16 @@ void MainWindow::on_pushButton_11_clicked(){
     auto app = static_cast<QApplication *>(QApplication::instance());
     app->removeTranslator(&translator);
     this->retranslateUi();
+}
+
+void MainWindow::on_pushButton_github_clicked(){
+    QUrl url("https://github.com/Tomax1963/TomaxCurveFit");
+    if (!QDesktopServices::openUrl(url)) {
+        qWarning("Failed to open the URL.");
+    }
+}
+
+void MainWindow::on_pushButton_github_2_clicked(){
+    on_pushButton_github_clicked();
 }
 

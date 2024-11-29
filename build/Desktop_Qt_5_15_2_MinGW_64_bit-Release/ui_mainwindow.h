@@ -106,6 +106,7 @@ public:
     QPushButton *pushButton_5;
     QPushButton *pushButton;
     QPushButton *pushButton_7;
+    QPushButton *pushButton_github;
     QWidget *tab_darst;
     QCustomPlot *dia_darstellung;
     QWidget *layoutWidget1;
@@ -197,6 +198,7 @@ public:
     QLabel *label_105;
     QTextBrowser *funktion;
     QPushButton *pushButton_6;
+    QPushButton *pushButton_github_2;
     QPushButton *pushButton_10;
     QPushButton *pushButton_11;
     QMenuBar *menubar;
@@ -698,6 +700,13 @@ public:
         icon1.addFile(QString::fromUtf8(":/paypal.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_7->setIcon(icon1);
         pushButton_7->setIconSize(QSize(96, 96));
+        pushButton_github = new QPushButton(tab_digi);
+        pushButton_github->setObjectName(QString::fromUtf8("pushButton_github"));
+        pushButton_github->setGeometry(QRect(130, 540, 101, 41));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/github.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_github->setIcon(icon2);
+        pushButton_github->setIconSize(QSize(36, 36));
         tabWidget->addTab(tab_digi, QString());
         tab_darst = new QWidget();
         tab_darst->setObjectName(QString::fromUtf8("tab_darst"));
@@ -1366,9 +1375,9 @@ public:
         pushButton_37->setObjectName(QString::fromUtf8("pushButton_37"));
         pushButton_37->setEnabled(false);
         pushButton_37->setMaximumSize(QSize(50, 16777215));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/pencil.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_37->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/pencil.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_37->setIcon(icon3);
 
         horizontalLayout_239->addWidget(pushButton_37);
 
@@ -1539,9 +1548,9 @@ public:
         b_kurve_zeigen_3->setObjectName(QString::fromUtf8("b_kurve_zeigen_3"));
         b_kurve_zeigen_3->setMinimumSize(QSize(0, 30));
         b_kurve_zeigen_3->setMaximumSize(QSize(16777215, 30));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Kurven.png"), QSize(), QIcon::Normal, QIcon::Off);
-        b_kurve_zeigen_3->setIcon(icon3);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/Kurven.png"), QSize(), QIcon::Normal, QIcon::Off);
+        b_kurve_zeigen_3->setIcon(icon4);
         b_kurve_zeigen_3->setIconSize(QSize(20, 11));
 
         horizontalLayout_114->addWidget(b_kurve_zeigen_3);
@@ -1549,9 +1558,9 @@ public:
         pushButton_8 = new QPushButton(layoutWidget1);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
         pushButton_8->setMinimumSize(QSize(0, 30));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/copy.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_8->setIcon(icon4);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/copy.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_8->setIcon(icon5);
 
         horizontalLayout_114->addWidget(pushButton_8);
 
@@ -1660,19 +1669,24 @@ public:
         pushButton_6->setGeometry(QRect(10, 570, 111, 41));
         pushButton_6->setIcon(icon1);
         pushButton_6->setIconSize(QSize(96, 96));
+        pushButton_github_2 = new QPushButton(tab_darst);
+        pushButton_github_2->setObjectName(QString::fromUtf8("pushButton_github_2"));
+        pushButton_github_2->setGeometry(QRect(120, 570, 101, 41));
+        pushButton_github_2->setIcon(icon2);
+        pushButton_github_2->setIconSize(QSize(36, 36));
         tabWidget->addTab(tab_darst, QString());
         pushButton_10 = new QPushButton(centralwidget);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         pushButton_10->setGeometry(QRect(1190, 10, 31, 24));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/english.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_10->setIcon(icon5);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/english.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_10->setIcon(icon6);
         pushButton_11 = new QPushButton(centralwidget);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         pushButton_11->setGeometry(QRect(1190, 40, 31, 24));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/deutsch.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_11->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/deutsch.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_11->setIcon(icon7);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -1684,7 +1698,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1744,6 +1758,10 @@ public:
         pushButton_5->setText(QString());
         pushButton->setText(QCoreApplication::translate("MainWindow", "Zur Darstellung \303\274bertragen", nullptr));
         pushButton_7->setText(QString());
+#if QT_CONFIG(tooltip)
+        pushButton_github->setToolTip(QCoreApplication::translate("MainWindow", "Zum Projekt in GitHub", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_github->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_digi), QCoreApplication::translate("MainWindow", "Digitalisieren", nullptr));
         label_91->setText(QCoreApplication::translate("MainWindow", "Xmin1", nullptr));
         label_92->setText(QCoreApplication::translate("MainWindow", "Y1", nullptr));
@@ -1792,6 +1810,10 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Mittlere quadratische Abweichung", nullptr));
         label_105->setText(QCoreApplication::translate("MainWindow", "Funktion", nullptr));
         pushButton_6->setText(QString());
+#if QT_CONFIG(tooltip)
+        pushButton_github_2->setToolTip(QCoreApplication::translate("MainWindow", "Zum Projekt in GitHub", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_github_2->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_darst), QCoreApplication::translate("MainWindow", "Darstellen", nullptr));
         pushButton_10->setText(QString());
         pushButton_11->setText(QString());

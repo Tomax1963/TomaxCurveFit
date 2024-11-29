@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_digi">
      <attribute name="title">
@@ -1043,6 +1043,32 @@ Sollte dieser an einer anderen Stelle liegen, muss er separat markiert werden.</
        <size>
         <width>96</width>
         <height>96</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_github">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>540</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Zum Projekt in GitHub</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/github.png</normaloff>:/github.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>36</width>
+        <height>36</height>
        </size>
       </property>
      </widget>
@@ -4447,6 +4473,32 @@ font: 12pt &quot;Verdana&quot;;</string>
        <size>
         <width>96</width>
         <height>96</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_github_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>570</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Zum Projekt in GitHub</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/github.png</normaloff>:/github.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>36</width>
+        <height>36</height>
        </size>
       </property>
      </widget>

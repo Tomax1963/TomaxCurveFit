@@ -57,6 +57,10 @@ private slots:
 
     void on_pushButton_11_clicked();
 
+    void on_pushButton_github_clicked();
+
+    void on_pushButton_github_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     double x_neu(double xfaktor, double digx, double x_pix_min, double xmin);

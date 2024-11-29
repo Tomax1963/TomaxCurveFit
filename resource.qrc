@@ -7,5 +7,6 @@
         <file>copy.png</file>
         <file>loading.gif</file>
         <file>paypal.png</file>
+        <file>github.png</file>
     </qresource>
 </RCC>

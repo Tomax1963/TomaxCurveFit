@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# Qt-Build-Dateien
+build-*/
+*.pro.user
+*.qmake.stash
+*.qmake.cache
+/build
