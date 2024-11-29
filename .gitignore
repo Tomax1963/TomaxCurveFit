@@ -37,3 +37,27 @@ build-*/
 *.qmake.stash
 *.qmake.cache
 /build
+TomaxCurveFit install/CurveFit.iss
+TomaxCurveFit install/translations/qt_ar.qm
+TomaxCurveFit install/translations/qt_bg.qm
+TomaxCurveFit install/translations/qt_ca.qm
+TomaxCurveFit install/translations/qt_cs.qm
+TomaxCurveFit install/translations/qt_da.qm
+TomaxCurveFit install/translations/qt_de.qm
+TomaxCurveFit install/translations/qt_en.qm
+TomaxCurveFit install/translations/qt_es.qm
+TomaxCurveFit install/translations/qt_fi.qm
+TomaxCurveFit install/translations/qt_fr.qm
+TomaxCurveFit install/translations/qt_gd.qm
+TomaxCurveFit install/translations/qt_he.qm
+TomaxCurveFit install/translations/qt_hu.qm
+TomaxCurveFit install/translations/qt_it.qm
+TomaxCurveFit install/translations/qt_ja.qm
+TomaxCurveFit install/translations/qt_ko.qm
+TomaxCurveFit install/translations/qt_lv.qm
+TomaxCurveFit install/translations/qt_pl.qm
+TomaxCurveFit install/translations/qt_ru.qm
+TomaxCurveFit install/translations/qt_sk.qm
+TomaxCurveFit install/translations/qt_tr.qm
+TomaxCurveFit install/translations/qt_uk.qm
+TomaxCurveFit install/translations/qt_zh_TW.qm
